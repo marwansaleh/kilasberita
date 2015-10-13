@@ -355,7 +355,7 @@ class MY_AdminController extends MY_Controller {
             redirect('home');
             exit;
         }
-        $this->data['meta_title'] = 'Nasabah.co - CMS';
+        $this->data['meta_title'] = 'Kilas Indonesia - CMS';
         $this->data['active_menu'] = 'dashboard';
         $this->data['body_class'] = 'skin-blue';
         
