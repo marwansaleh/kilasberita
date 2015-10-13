@@ -215,7 +215,7 @@
           Content Management System ( CMS )
         </div>
         <!-- Default to the left --> 
-        <strong>Copyright &copy; 2015 <a href="#">Nasabah.CO</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2015 <a href="#">Kilas Indonesia</a>.</strong> All rights reserved.
       </footer>
 
     </div>
