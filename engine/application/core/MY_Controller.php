@@ -249,7 +249,7 @@ class MY_Controller extends MY_BaseController {
     function __construct() {
         parent::__construct();    
         
-        $this->data['meta_title'] = 'Nasabah.co';
+        $this->data['meta_title'] = 'Kilas Indonesia';
         $this->data['active_menu'] = 'home';
         
         //is user loggedin
