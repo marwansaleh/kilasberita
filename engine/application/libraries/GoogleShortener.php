@@ -32,7 +32,7 @@ class GoogleShortener extends Library {
     
     public function shortener($long_url){
         //open debug file
-        $fp = fopen($this->_debug_file, 'w');
+        //$fp = fopen($this->_debug_file, 'w');
         
         $options = array(
             'longUrl'   => $long_url
@@ -50,10 +50,12 @@ class GoogleShortener extends Library {
         curl_setopt($curl, CURLOPT_HEADER, FALSE);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($curl, CURLOPT_VERBOSE, TRUE);
-        curl_setopt($curl, CURLOPT_STDERR, $fp);
+        //curl_setopt($curl, CURLOPT_STDERR, $fp);
             
         $output = curl_exec($curl);
         curl_close($curl);
+        
+        fclose($fp);
         
         if (($decoded = json_decode($output))){
             return $decoded;
@@ -83,6 +85,8 @@ class GoogleShortener extends Library {
         $output = curl_exec($curl);
         curl_close($curl);
         
+        fclose($fp);
+        
         if (($decoded = json_decode($output))){
             return $decoded;
         }
@@ -109,6 +113,8 @@ class GoogleShortener extends Library {
             
         $output = curl_exec($curl);
         curl_close($curl);
+        
+        fclose($fp);
         
         if (($decoded = json_decode($output))){
             return $decoded;
