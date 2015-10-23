@@ -22,6 +22,14 @@ class GoogleShortener extends Library {
         $this->_debug_file = rtrim(sys_get_temp_dir(),'/') .'/googlest.log';
     }
     
+    public function read_debug(){
+        if (file_exists($this->_debug_file)){
+            echo file_get_contents($this->_debug_file);
+        }else{
+            echo 'No debug file detected';
+        }
+    }
+    
     public function shortener($long_url){
         //open debug file
         $fp = fopen($this->_debug_file, 'w');
