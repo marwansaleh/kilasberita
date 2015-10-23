@@ -259,8 +259,12 @@
             var slug = $('#url_title').val();
             var base_controller = 'detail/';
             var longUrl = '<?php echo site_url(); ?>' + base_controller + slug;
-            $.post('<?php echo site_url('ajax/google_service/shortener'); ?>',{url:longUrl},function(result){
-                $('#url_short').val(result);
+            $.getJSON('<?php echo site_url('ajax/google_service/shortener'); ?>',{url:longUrl},function(result){
+                if (result.success){
+                    $('#url_short').val(result.short);
+                }else{
+                    alert(result.message);
+                }
             });
         });
         
