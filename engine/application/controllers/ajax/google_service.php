@@ -15,18 +15,25 @@ class Google_service extends MY_Ajax {
         $this->GOOGLE = new GoogleShortener();
     }
     function shortener(){
-        $input_url = $this->input->post('url');
+        $result = array('success' => FALSE);
+        
+        $input_url = $this->input->get('url');
         
         if (!$input_url){
-            echo 'Not a valid URL';
+            $result['message'] = 'Not a valid URL !';
         }else{
             $output = $this->GOOGLE->shortener($input_url);
             if (isset($output->id)){
-                echo $output->id;
+                $result['success'] = TRUE;
+                $result['short'] = $output->id;
             }else if (isset($output->error)){
-                echo $output->error->message;
+                $result['message'] = $output->error->message;
             }
         }
+        
+        $result['debug'] = $this->GOOGLE->read_debug();
+        
+        echo json_encode($result);
     }
     
     function expander(){
