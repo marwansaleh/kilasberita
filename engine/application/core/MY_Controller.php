@@ -383,13 +383,11 @@ class MY_AdminController extends MY_Controller {
  */
 class MY_Ajax extends MY_BaseController {
     
-    function __construct($ajax_only=FALSE) {
+    function __construct() {
         parent::__construct();
         
         //check if ajax request
-        if ($ajax_only){
-            $this->_exit_not_ajax_request();
-        }
+        //$this->_exit_not_ajax_request();
     }
     
     function send_output($data=NULL){
