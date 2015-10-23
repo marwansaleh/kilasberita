@@ -24,9 +24,9 @@ class GoogleShortener extends Library {
     
     public function read_debug(){
         if (file_exists($this->_debug_file)){
-            echo file_get_contents($this->_debug_file);
+            return file_get_contents($this->_debug_file);
         }else{
-            echo 'No debug file detected';
+            return 'No debug file detected';
         }
     }
     
