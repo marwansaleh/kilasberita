@@ -257,7 +257,7 @@
         $('#btn-gen-slug').on('click',function(){
             create_url_title('title', 'url_title');
             var slug = $('#url_title').val();
-            var base_controller = '/detail/';
+            var base_controller = 'detail/';
             var longUrl = '<?php echo site_url(); ?>' + base_controller + slug;
             $.post('<?php echo site_url('ajax/google_service/shortener'); ?>',{url:longUrl},function(result){
                 $('#url_short').val(result);
