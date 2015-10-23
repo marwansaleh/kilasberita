@@ -55,7 +55,7 @@ class GoogleShortener extends Library {
         $output = curl_exec($curl);
         curl_close($curl);
         
-        fclose($fp);
+        //fclose($fp);
         
         if (($decoded = json_decode($output))){
             return $decoded;
