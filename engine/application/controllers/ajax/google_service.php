@@ -14,6 +14,11 @@ class Google_service extends MY_Ajax {
         
         $this->GOOGLE = new GoogleShortener();
     }
+    
+    function debug(){
+        echo $this->GOOGLE->read_debug();
+    }
+    
     function shortener(){
         $result = array('success' => FALSE);
         
