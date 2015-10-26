@@ -249,7 +249,7 @@ class MY_Controller extends MY_BaseController {
     function __construct() {
         parent::__construct();    
         
-        $this->data['meta_title'] = 'Kilas Indonesia';
+        $this->data['meta_title'] = 'Indonesia Satu';
         $this->data['active_menu'] = 'home';
         
         //is user loggedin
@@ -308,8 +308,8 @@ class MY_Controller extends MY_BaseController {
      */
     private function meta_set_default(){
         $this->data['meta'] = array(
-            'author'            =>  'Majalah Stabilitas <redaksi@stabilitas.co.id>',
-            'description'       =>  'Majalah Stabilitas - Majalah yang mengulas secara lengkap tentang manajemen resiko di lembaga keuangan',
+            'author'            =>  'Indonesia Satu',
+            'description'       =>  'Berita online yang mengulas secara lengkap tentang kejadian yang terjadi setiap hari nasional dan internasional',
             'keywords'          => implode(',', $this->meta_keyword),            
             'canonical'         => current_url(),
             
@@ -336,9 +336,9 @@ class MY_Controller extends MY_BaseController {
     
     private function og_set_default(){
         $this->data['og_props'] = array(
-            'title'             =>  'Majalah Stabilitas - Manajemen Resiko',
-            'site_name'         =>  'Majalah Stabilitas',
-            'description'       =>  'Majalah Stabilitas - Majalah yang mengulas secara lengkap tentang manajemen resiko di lembaga keuangan',          
+            'title'             =>  'Indonesia Satu',
+            'site_name'         =>  'Indonesia Satu',
+            'description'       =>  'Berita online yang mengulas secara lengkap tentang kejadian yang terjadi setiap hari nasional dan internasional',          
             'url'               =>  current_url(),
             'fb:app_id'         => '',//$this->get_sys_var('FB_APP_ID'),
             'type'              => 'article'
@@ -355,7 +355,7 @@ class MY_AdminController extends MY_Controller {
             redirect('home');
             exit;
         }
-        $this->data['meta_title'] = 'Kilas Indonesia - CMS';
+        $this->data['meta_title'] = 'IndonesiaSatu.co - CMS';
         $this->data['active_menu'] = 'dashboard';
         $this->data['body_class'] = 'skin-blue';
         
