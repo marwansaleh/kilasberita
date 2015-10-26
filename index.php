@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 
 $path = dirname(__FILE__);
-$testing = '/home/sloki/user/k8721830/sites/kilasindonesia.nasabah.co/www';
+$testing = '/home/sloki/user/k8721830/sites/indonesiasatu.nasabah.co/www';
 $production = '/home/sloki/user/k8721830/sites/www.nasabah.co/www';
 
 switch ($path){
